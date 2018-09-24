@@ -3,8 +3,8 @@
 
 
 "@sekhmetdev/busy-sdk@^0.1.0":
-  version "0.1.0"
-  resolved "https://registry.yarnpkg.com/@sekhmetdev/busy-sdk/-/busy-sdk-0.1.0.tgz#0c694ebb2eb0c0fdfdd58520aba1b5b2001ef4a2"
+  version "0.1.1"
+  resolved "https://registry.yarnpkg.com/@sekhmetdev/busy-sdk/-/busy-sdk-0.1.1.tgz#70ed4115ba58ff8e4a51dac0eac96c26930ac8ce"
 
 abab@^1.0.3:
   version "1.0.4"

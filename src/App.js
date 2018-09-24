@@ -3,7 +3,7 @@ import { createClient } from "@sekhmetdev/busy-sdk";
 import logo from "./logo.svg";
 import "./App.css";
 
-const client = createClient(window.parent);
+const client = createClient(window.parent, "http://localhost:3000");
 
 let id = 0;
 
