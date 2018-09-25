@@ -2,9 +2,9 @@
 # yarn lockfile v1
 
 
-"@sekhmetdev/busy-sdk@^0.1.0":
-  version "0.1.1"
-  resolved "https://registry.yarnpkg.com/@sekhmetdev/busy-sdk/-/busy-sdk-0.1.1.tgz#70ed4115ba58ff8e4a51dac0eac96c26930ac8ce"
+"@sekhmetdev/busy-sdk@^0.1.2":
+  version "0.1.2"
+  resolved "https://registry.yarnpkg.com/@sekhmetdev/busy-sdk/-/busy-sdk-0.1.2.tgz#76d0ac8ca7d2016a312e9d8847eeb4dc287641f3"
 
 abab@^1.0.3:
   version "1.0.4"

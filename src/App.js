@@ -3,9 +3,7 @@ import { createClient } from "@sekhmetdev/busy-sdk";
 import logo from "./logo.svg";
 import "./App.css";
 
-const client = createClient(window.parent, "http://localhost:3000");
-
-let id = 0;
+const client = createClient(window.parent, ["http://localhost:3000"]);
 
 class App extends Component {
   constructor(props) {
@@ -17,7 +15,7 @@ class App extends Component {
   }
 
   handleRefreshClick = () => {
-    client.call(id++, "get_rooms", []).then(rooms =>
+    client.call("get_rooms", []).then(rooms =>
       this.setState({
         rooms
       })
