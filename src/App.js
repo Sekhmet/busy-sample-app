@@ -20,11 +20,13 @@ class App extends Component {
       .call("get_rooms", [])
       .then(rooms =>
         this.setState({
-          rooms
+          rooms,
+          error: null
         })
       )
       .catch(err => {
         this.setState({
+          rooms: [],
           error: err.message
         });
       });
@@ -40,7 +42,7 @@ class App extends Component {
           <h1 className="App-title">Welcome to React</h1>
         </header>
         <h2>Rooms</h2>
-        {error ? error : null}
+        {error ? <p>{error}</p> : null}
         <button onClick={this.handleRefreshClick}>
           {error ? "Retry" : "Load"}
         </button>
