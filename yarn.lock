@@ -2,10 +2,10 @@
 # yarn lockfile v1
 
 
-"@sekhmetdev/busy-sdk@^0.1.3":
-  version "0.1.3"
-  resolved "https://registry.yarnpkg.com/@sekhmetdev/busy-sdk/-/busy-sdk-0.1.3.tgz#f80316103792f1e70a44ed666d9a403e44a3b77a"
-  integrity sha512-zIrEI1fxeDs/OBXKxcbP2yPpiPH27FQdqbH40W/33KyDgCYvSH9SfOTQFJ/DA3wf4Rru/VGsPFGe16c132f8HQ==
+"@sekhmetdev/busy-sdk@^0.1.4":
+  version "0.1.4"
+  resolved "https://registry.yarnpkg.com/@sekhmetdev/busy-sdk/-/busy-sdk-0.1.4.tgz#49bfd4f360b5696580b8793ff93665a061b71ab1"
+  integrity sha512-LiY+crII+Is3oMhf4AJ6YP8myEKyhdmuGy/Dd5IVPCSVWM0OwKeXPosQzZ9u5HU4PONmsgIB5lMqro4RqiM00Q==
 
 abab@^1.0.3:
   version "1.0.4"
