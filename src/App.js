@@ -15,6 +15,13 @@ class App extends Component {
     };
   }
 
+  handleTransferClick = () => {
+    client
+      .call("steem/transfer")
+      .then(console.log)
+      .catch(console.error);
+  };
+
   handleRefreshClick = () => {
     client
       .call("get_rooms", [])
@@ -41,6 +48,8 @@ class App extends Component {
           <img src={logo} className="App-logo" alt="logo" />
           <h1 className="App-title">Welcome to React</h1>
         </header>
+        <h2>Steem</h2>
+        <button onClick={this.handleTransferClick}>Transfer</button>
         <h2>Rooms</h2>
         {error ? <p>{error}</p> : null}
         <button onClick={this.handleRefreshClick}>
