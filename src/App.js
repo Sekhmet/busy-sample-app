@@ -17,7 +17,7 @@ class App extends Component {
 
   handleTransferClick = () => {
     client
-      .call("steem/transfer")
+      .call("steem/transfer", ["steemguest", "sekhmet", "0.001 STEEM", "hey"])
       .then(console.log)
       .catch(console.error);
   };
