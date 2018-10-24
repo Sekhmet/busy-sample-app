@@ -15,9 +15,19 @@ class App extends Component {
     };
   }
 
-  handleTransferClick = () => {
+  handleSteemTransferClick = () => {
     client
       .call("steem/transfer", ["steemguest", "sekhmet", "0.001 STEEM", "hey"])
+      .then(console.log)
+      .catch(console.error);
+  };
+
+  handleEthereumTransferClick = () => {
+    client
+      .call("eth/transfer", [
+        "0x16C391f56a3372EC8Cd3E0264548745a93Abc320",
+        "0.001"
+      ])
       .then(console.log)
       .catch(console.error);
   };
@@ -49,7 +59,9 @@ class App extends Component {
           <h1 className="App-title">Welcome to React</h1>
         </header>
         <h2>Steem</h2>
-        <button onClick={this.handleTransferClick}>Transfer</button>
+        <button onClick={this.handleSteemTransferClick}>Transfer</button>
+        <h2>Ethereum (Rospen)</h2>
+        <button onClick={this.handleEthereumTransferClick}>Transfer</button>
         <h2>Rooms</h2>
         {error ? <p>{error}</p> : null}
         <button onClick={this.handleRefreshClick}>
