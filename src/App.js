@@ -11,13 +11,53 @@ class App extends Component {
 
     this.state = {
       rooms: [],
-      error: null
+      error: null,
+      username: null
     };
   }
 
+  componentDidMount() {
+    this.login();
+  }
+
+  login = () => {
+    client.call("steem/get_username").then(username =>
+      this.setState({
+        username
+      })
+    );
+  };
+
+  handleUpvoteClick = () => {
+    client
+      .call("steem/vote", [
+        "steemguest",
+        "singhalbhavna",
+        "identify-and-escape-form-credit-card-debt",
+        10000
+      ])
+      .then(console.log)
+      .catch(console.error);
+  };
+
+  handleCommentClick = () => {
+    client
+      .call("steem/comment", [
+        "",
+        "test",
+        "steemguest",
+        "4mdrbf-test",
+        "test",
+        "test content",
+        "{}"
+      ])
+      .then(console.log)
+      .catch(console.error);
+  };
+
   handleSteemTransferClick = () => {
     client
-      .call("steem/transfer", ["sekhmet", "0.001 STEEM", "hey"])
+      .call("steem/transfer", ["steemguest", "sekhmet", "0.001 STEEM", "hey"])
       .then(console.log)
       .catch(console.error);
   };
@@ -50,15 +90,18 @@ class App extends Component {
   };
 
   render() {
-    const { error } = this.state;
+    const { username, error } = this.state;
 
     return (
       <div className="App">
         <header className="App-header">
           <img src={logo} className="App-logo" alt="logo" />
           <h1 className="App-title">Welcome to React</h1>
+          {username && <h2>Logged in as: {username}</h2>}
         </header>
         <h2>Steem</h2>
+        <button onClick={this.handleUpvoteClick}>Upvote</button>
+        <button onClick={this.handleCommentClick}>Comment</button>
         <button onClick={this.handleSteemTransferClick}>Transfer</button>
         <h2>Ethereum (Rospen)</h2>
         <button onClick={this.handleEthereumTransferClick}>Transfer</button>
